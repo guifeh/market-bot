@@ -9,3 +9,5 @@ __pycache__/
 venv/
 *.pyc
 .env
+appsettings.json
+appsettings.*.json
