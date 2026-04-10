@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="MarketBot.API/MarketBot.API.csproj" />
+  <Project Path="MarketBot.Domain/MarketBot.Domain.csproj" />
+  <Project Path="MarketBot.Infrastructure/MarketBot.Infrastructure.csproj" />
+</Solution>

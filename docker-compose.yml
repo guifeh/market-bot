@@ -1,0 +1,25 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: market-bot-db
+    environment:
+      POSTGRES_USER: marketbot
+      POSTGRES_PASSWORD: marketbot123
+      POSTGRES_DB: marketbot
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: market-bot-queue
+    ports:
+      - "5672:5672" 
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: marketbot
+      RABBITMQ_DEFAULT_PASS: marketbot123
+
+volumes:
+  postgres_data:
